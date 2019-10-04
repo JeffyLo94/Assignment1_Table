@@ -50,11 +50,7 @@ public class MainActivity extends AppCompatActivity {
         grid.setRowCount(TABLE_ROWS);
         grid.setColumnCount(TABLE_COLS);
         grid.setOrientation(GridLayout.VERTICAL);
-//        GridLayout.LayoutParams glp = new GridLayout.LayoutParams();
-//        glp.setGravity(Gravity.FILL_HORIZONTAL);
-//        glp.width = ViewGroup.LayoutParams.WRAP_CONTENT;
-//        glp.height = ViewGroup.LayoutParams.WRAP_CONTENT;
-//        grid.setLayoutParams( glp );
+
         grid.setLayoutParams( new ViewGroup.LayoutParams(
                 ViewGroup.LayoutParams.WRAP_CONTENT,
                 ViewGroup.LayoutParams.WRAP_CONTENT
@@ -139,28 +135,7 @@ public class MainActivity extends AppCompatActivity {
                             0f, 0f,
                             "System.out.println(greeting +\", World!\")",
                             BLUE, BLACK );
-//        GridLayout innerGrid = new GridLayout(this);
-//        innerGrid.setBackgroundColor(Color.BLACK);
-//        innerGrid.setRowCount(6);
-//        innerGrid.setColumnCount(2);
-//        innerGrid.setOrientation(GridLayout.VERTICAL);
-//        innerGrid.setLayoutParams( new ViewGroup.LayoutParams(
-//                ViewGroup.LayoutParams.WRAP_CONTENT,
-//                ViewGroup.LayoutParams.MATCH_PARENT
-//        ));
-//        GridLayout.Spec rowSpec;
-//        GridLayout.Spec colSpec;
-//        rowSpec = GridLayout.spec(5, 6, GridLayout.FILL, 0f);
-//        colSpec = GridLayout.spec(2, 2, GridLayout.FILL, 0f);
-//        GridLayout.LayoutParams p = new GridLayout.LayoutParams(rowSpec, colSpec);
-//        grid.addView(innerGrid, p);
 
-//        GridLayout.Spec rowSpec;
-//        GridLayout.Spec colSpec;
-//        rowSpec = GridLayout.spec(5, 6, GridLayout.FILL, 0f);
-//        colSpec = GridLayout.spec(2, 2, GridLayout.FILL, 0f);
-//        GridLayout.LayoutParams p = new GridLayout.LayoutParams(rowSpec, colSpec);
-//        grid.addView(innerGrid, p);
 
         View childGrid = LayoutInflater.from(this).inflate(
                 R.layout.inner_grid, null
@@ -180,18 +155,7 @@ public class MainActivity extends AppCompatActivity {
                 0f, 0f,
                 "",
                 BLUE, BLACK );
-//        createTextViewAtCell(innerGrid,
-//                0, 0,
-//                1, 1, 0f, 0f, "int min", BLUE, BLACK);
-//        createTextViewAtCell(innerGrid,
-//                0, 1,
-//                1, 1, 0f, 0f, "int max", BLUE, BLACK);
-//        createTwoColumnTextViewGrid(innerGrid,
-//                0, 1,
-//                1, 2,
-//                0f, 0f,
-//                "int min", "int max",
-//                BLUE, BLACK, false);
+
         createTextViewAtCell(grid,
                 5, 4,
                 1, 1,
@@ -205,12 +169,7 @@ public class MainActivity extends AppCompatActivity {
                 0f, 0f,
                 "Rule",
                 WHITE, BLACK );
-//        createBoldTextViewAtCell(innerGrid,
-//                1, 0,
-//                1, 1, 0f, 1f, "From", YELLOW, BLACK);
-//        createBoldTextViewAtCell(innerGrid,
-//                1, 1,
-//                1, 1, 0f, 1f, "To", YELLOW, BLACK);
+
         createBoldTextViewAtCell(grid,
                 6, 4,
                 1, 1,
@@ -224,12 +183,7 @@ public class MainActivity extends AppCompatActivity {
                 0f, 0f,
                 "R10",
                 WHITE, BLACK, Gravity.LEFT );
-//        createTextViewAtCell(innerGrid,
-//                2, 0,
-//                1, 1, 0f, 1f, "0", YELLOW, BLACK, Gravity.RIGHT);
-//        createTextViewAtCell(innerGrid,
-//                2, 1,
-//                1, 1, 0f, 1f, "11", YELLOW, BLACK, Gravity.RIGHT);
+
         createTextViewAtCell(grid,
                 7, 4,
                 1, 1,
@@ -243,12 +197,7 @@ public class MainActivity extends AppCompatActivity {
                 0f, 0f,
                 "R20",
                 WHITE, BLACK, Gravity.LEFT );
-//        createTextViewAtCell(innerGrid,
-//                3, 0,
-//                1, 1, 0f, 1f, "12", YELLOW, BLACK, Gravity.RIGHT);
-//        createTextViewAtCell(innerGrid,
-//                3, 1,
-//                1, 1, 0f, 1f, "17", YELLOW, BLACK, Gravity.RIGHT);
+
         createTextViewAtCell(grid,
                 8, 4,
                 1, 1,
@@ -263,12 +212,7 @@ public class MainActivity extends AppCompatActivity {
                 0f, 0f,
                 "R30",
                 WHITE, BLACK, Gravity.LEFT );
-//        createTextViewAtCell(innerGrid,
-//                4, 0,
-//                1, 1, 0f, 1f, "18", YELLOW, BLACK, Gravity.RIGHT);
-//        createTextViewAtCell(innerGrid,
-//                4, 1,
-//                1, 1, 0f, 1f, "21", YELLOW, BLACK, Gravity.RIGHT);
+
         createTextViewAtCell(grid,
                 9, 4,
                 1, 1,
@@ -283,12 +227,7 @@ public class MainActivity extends AppCompatActivity {
                 0f, 0f,
                 "R40",
                 WHITE, BLACK, Gravity.LEFT );
-//        createTextViewAtCell(innerGrid,
-//                5, 0,
-//                1, 1, 0f, 1f, "22", YELLOW, BLACK, Gravity.RIGHT);
-//        createTextViewAtCell(innerGrid,
-//                5, 1,
-//                1, 1, 0f, 1f, "23", YELLOW, BLACK, Gravity.RIGHT);
+
         createTextViewAtCell(grid,
                 10, 4,
                 1, 1,
@@ -371,28 +310,12 @@ public class MainActivity extends AppCompatActivity {
         tv.setTextColor(Color.parseColor(textColor));
         tv.setBackgroundColor(Color.parseColor(backgroundColor));
         tv.setPadding(30, 1, 30, 1);
-
-//        if( row > 6) {
-//            if (col >= 2 && col < 4) {
-//                tv.setGravity(Gravity.RIGHT);
-//            } else {
-//                tv.setGravity(Gravity.LEFT);
-//            }
-//        } else if (row == 6 ){
-//            tv.setGravity(Gravity.LEFT);
-//        } else {
             tv.setGravity(Gravity.CENTER);
-//        }
 
         GridLayout.Spec rowSpec;
         GridLayout.Spec colSpec;
-//        if (row >= 5 && (col == 2 || col == 3)){
-//            rowSpec = GridLayout.spec(row, rowspan, GridLayout.FILL, rWeight);
-//            colSpec = GridLayout.spec(col, colspan, GridLayout.FILL, cWeight);
-//        } else {
             rowSpec = GridLayout.spec(row, rowspan, GridLayout.FILL, rWeight);
             colSpec = GridLayout.spec(col, colspan, GridLayout.FILL, cWeight);
-//        }
 
         GridLayout.LayoutParams p = new GridLayout.LayoutParams(rowSpec, colSpec);
         p.setMargins(2, 2, 2, 2);
@@ -417,13 +340,8 @@ public class MainActivity extends AppCompatActivity {
 
         GridLayout.Spec rowSpec;
         GridLayout.Spec colSpec;
-//        if (row >= 5 && (col == 2 || col == 3)){
-//            rowSpec = GridLayout.spec(row, rowspan, GridLayout.FILL, rWeight);
-//            colSpec = GridLayout.spec(col, colspan, GridLayout.FILL, cWeight);
-//        } else {
             rowSpec = GridLayout.spec(row, rowspan, GridLayout.FILL, rWeight);
             colSpec = GridLayout.spec(col, colspan, GridLayout.FILL, cWeight);
-//        }
 
         GridLayout.LayoutParams p = new GridLayout.LayoutParams(rowSpec, colSpec);
         p.setMargins(2, 2, 2, 2);
